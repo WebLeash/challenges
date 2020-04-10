@@ -49,6 +49,7 @@ sub check_next {
 	$p++;
 	print "debug in check_next = >$bits[$p]<\n";
         # Is next pos a zero?
+<<<<<<< HEAD
 	# Check ther is a gap
 	my $c = $p;
 	
@@ -65,12 +66,18 @@ sub check_next {
 		}
 		return 0;
 		
+=======
+	if($bits[$p] == 0) # Ok to carry on and count
+	{
+		return 0;
+>>>>>>> 7cd08f13c516fd71274ae04a115ff6a5ec6acbb9
 	}else
 	{
 		return 1;
 	}
 
 }
+<<<<<<< HEAD
 sub check_for_gap {
 	my $gap_pointer = shift;
 	my $limit = shift;
@@ -97,6 +104,8 @@ sub check_for_gap {
 		return 1;
 	}
 }
+=======
+>>>>>>> 7cd08f13c516fd71274ae04a115ff6a5ec6acbb9
 foreach my $pos(@zc)
 {
 	print "zc>$pos< \n";
